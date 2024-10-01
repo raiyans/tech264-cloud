@@ -19,4 +19,4 @@
 # cloud diagram recreated
 * https://lucid.app/lucidchart/2e8e8991-8471-4bed-a4e6-10e3e2881810/edit?viewport_loc=-1087%2C-1714%2C2112%2C2469%2C0_0&invitationId=inv_54f48fdd-5e6d-4a6b-86b9-5a99b590c334
   
-[cloud](scripting\Cloud_architecture.png)
+[cloud](\scripting\Cloud_architecture.png)
