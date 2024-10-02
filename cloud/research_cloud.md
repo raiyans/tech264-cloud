@@ -2,22 +2,24 @@
 # Cloud Computing Overview
 
 ## 1. How do we know if something is in the cloud?
-Something is considered "in the cloud" if it is hosted on external servers accessible via the internet rather than on local on-premise servers. Cloud services are managed by third-party providers and accessed through the internet, offering scalability, accessibility, and often lower costs due to shared resources.
+Something is considered "in the cloud" if it is hosted on external servers accessible via the internet rather than on local on-premise servers. Cloud services are managed by third-party providers and accessed through the internet, offering scalability, accessibility, and often lower costs due to shared resources. provided as a service with on demand service usually 
 
 ## 2. Differences between on-prem and the cloud
-- **On-Premise:** Hardware and software are owned and operated locally, meaning full control over the infrastructure but requiring significant initial costs, space, and in-house expertise.
-- **Cloud:** Resources like storage, processing, and applications are hosted on remote servers, reducing CapEx (capital expenditure) but increasing reliance on external providers.
+- **On-Premise:** Hardware and software are owned and operated locally, meaning full control over the infrastructure but requiring significant initial costs, space, and in-house expertise. it is your own physical servers that are related to keep it working working
+- **Cloud:** Resources like storage, processing, and applications are hosted on remote servers, reducing CapEx (capital expenditure) but increasing reliance on external providers. the cloud provider will handle the physical aspects
 
 ## 3. The 4 deployment models of cloud: Private vs Public vs Hybrid vs Multi-Cloud
 - **Private Cloud:** Infrastructure is dedicated to a single organization, offering greater control, security, and customization. Ideal for companies with strict data regulations or security needs.
 - **Public Cloud:** Resources are shared across multiple clients by a third-party provider. It offers cost-efficiency, scalability, and quick setup, but less control and customization.
-- **Hybrid Cloud:** Combines on-premise infrastructure (or private cloud) with public cloud resources, providing flexibility to store sensitive data locally while scaling non-sensitive workloads to the cloud.
-- **Multi-Cloud:** Utilizes multiple cloud providers to optimize performance, avoid vendor lock-in, and increase resilience. Offers flexibility but may be complex to manage.
+- **Hybrid Cloud:** Combines on-premise infrastructure (or private cloud) with public cloud resources, providing flexibility to store sensitive data locally while scaling non-sensitive workloads to the cloud. ideal maybe for regulations
+- **Multi-Cloud:** Utilizes multiple cloud providers to optimize performance, avoid vendor lock-in, and increase resilience. Offers flexibility but may be complex to manage. ideal maybe fo financial services that need redundancy
 
 ## 4. Types of cloud services: IaaS, PaaS, SaaS
 - **IaaS (Infrastructure as a Service):** Provides basic cloud infrastructure services such as virtual machines, storage, and networks. Example: AWS EC2.
-- **PaaS (Platform as a Service):** Offers a platform allowing developers to build applications without managing underlying infrastructure. Example: Google App Engine.
+- **PaaS (Platform as a Service):** Offers a platform allowing developers to build applications without managing underlying infrastructure. Example: Google App Engine. manage the security with code best practices that cannot be exploited
 - **SaaS (Software as a Service):** Delivers fully functional software applications over the internet. Example: Microsoft Office 365 or Salesforce.
+
+- **Diagram** [shared responsibilty](Defining_responsibility.png)
 
 ## 5. Advantages/Disadvantages of the cloud for a business
 **Advantages:**
@@ -60,14 +62,14 @@ The cloud market is dominated by three major providers: AWS, Microsoft Azure, an
 ## 11. What sorts of things do you usually need to pay for when using the cloud?
 - **Storage:** For data storage, including block storage and object storage.
 - **Compute Power:** For processing tasks, including virtual machines or containers.
-- **Data Transfer:** Often includes fees for data transferred in and out of the cloud.
+- **Data Transfer:** Often includes fees for data transferred in(ingress not usually fees paid) and out(egress) of the cloud.
 - **Additional Services:** Things like machine learning, databases, and analytics typically incur extra charges.
 
 ## 12. What are the 4 pillars of DevOps? How do they link into the Cloud?
 - **Collaboration:** Encouraging seamless collaboration between development and operations teams.
 - **Automation:** Automating processes like testing, deployment, and infrastructure provisioning, which the cloud enhances with tools like Infrastructure as Code (IaC).
 - **Continuous Integration/Continuous Deployment (CI/CD):** Enables rapid and reliable software delivery pipelines, which are supported by cloud-native CI/CD services.
-- **Monitoring:** Cloud platforms provide built-in monitoring and alerting tools to track the health and performance of applications.
+- **Monitoring/Feedback:** Cloud platforms provide built-in monitoring and alerting tools to track the health and performance of applications.
 
 ## 13. Case Studies of Cloud Migration
 1. **Netflix:** Migrated from on-premise data centers to AWS to handle its immense streaming traffic. Benefits included scalability and the ability to innovate faster by leveraging cloud services like AWS Lambda and Amazon RDS.

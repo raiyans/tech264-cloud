@@ -8,8 +8,32 @@ descriptions and flags found using the commands for help and manual
 
 TODO: check how to use pushd and popd for advanced navigating 
 
-## Navigation: 
+## root in linux
+Root in linux is the super user
+dont use sudo every command - sudo is super use command temporarily
+# Advanced Package Tool
+**What is APT?**  
+* Collection of tools used to install, update, remove, and otherwise manage software packages on Debian
+* The Debian project maintains an official repository holding thousands of software packages which APT users can install via the apt command-line program and a network connection. Users can also install packages from third-party repositories as well as locally-stored repositories.
+## updating packages list
+> sudo apt update -y
+why do we need to update everytime?
+## upgrading packages (potential break)
+this is where linux system can break because of package versions not being compatible
+> sudo apt upgrade -y
+
+## how to become superuser for multi cmds
+Command below goes to the top of your directory with the os related files here, this is the root directory
+> cd /
+> 
+## login as root user now
+> sudo su
+
+# Navigation: 
 full stop means current directory `/.`
+
+cd with a space in file/folder name 
+> cd my\ pictures
 
 ## Command:  ls
 
@@ -30,6 +54,16 @@ Used for finding anything with a capital letter:
 
 Same for anything lower case
 > ls [\[:lower:]]* 
+### common flag meaning
+`-l` usually means long format
+
+## Command:  uname
+tells us what the os is
+> uname
+
+## Command: whoami
+wha the host name is 
+> whoami
 
 ## Command:  whereis
 
@@ -58,7 +92,7 @@ example where parent folder doesnt exist
 > mkdir -p newFolder/Subfolder
 
 ## Command:  mv 
-just move files
+move files and **rename files**
 > project1/file.txt newFolder/Subfolder
 
 ## Command:  cp 
@@ -74,6 +108,8 @@ delete file or files
 delete directories. Without args/wildcards, it will delete the last folder in the pathname given
 > rmdir sub1/sub2
 
+## Command:  file
+> file example.txt
 
 ## Command:  cat
 stands for concatenate although can be used as a print line tool on the terminal
@@ -91,6 +127,10 @@ Use -n to choose how many lines you want to print out
 ## Command:  tail
 shows the last 10 lines instead of everything
 > tail longOutput001.log
+
+## Command:  nl
+prints the text with number of line on each line
+> nl longOutput001.log
 
 ## Command:  more and less
 lets you navigate the textfiles
@@ -192,6 +232,8 @@ print just the first line alternative with pipeline example:
 
 # Modify file permissions 
 
+[deeper_infomations](linux_file_ownership_and_permission.md)
+
 ## reading permissions
 running the line "ls -l" will show you the permissions with output like this:
 > -rw-rw-rw-  1 vscode root 3070 Sep  7 14:31 README.md
@@ -249,6 +291,16 @@ connection can also be used for terminal access, file transfers, and for tunneli
 The **hostname** is what a device is called on a network. The hostname is used to distinguish devices within a local network.
 this command will display the IP address(es) assigned to your
 >hostname -I
+
+## Command: process
+process associated with a terminal session can be found with the command below 
+> ps -p $$
+
+## Command: history
+showws a list of cmds you ran in linux, stored in the bash.
+> history
+cmd below will clear history
+> history -c 
 
 ## Command: ssh-copy-id
 `ssh-copy-id` installs an [SSH key](https://www.ssh.com/ssh/key/) on a server as an authorized key.
@@ -402,5 +454,3 @@ for loops (newer like c)
 > echo "The counter is at: $i"
 > done
 
-
-N
