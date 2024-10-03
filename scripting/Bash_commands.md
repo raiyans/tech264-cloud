@@ -1,5 +1,70 @@
        #cheatsheet #linux  #cloud
 
+- [Advanced Package Tool](#advanced-package-tool)
+  - [updating packages list](#updating-packages-list)
+  - [upgrading packages (potential break)](#upgrading-packages-potential-break)
+  - [how to become superuser for multi cmds](#how-to-become-superuser-for-multi-cmds)
+  - [login as root user now](#login-as-root-user-now)
+- [Navigation:](#navigation)
+  - [Command:  ls](#command--ls)
+    - [common flag meaning](#common-flag-meaning)
+  - [Command:  uname](#command--uname)
+  - [Command: whoami](#command-whoami)
+  - [Command:  whereis](#command--whereis)
+  - [Command:  which](#command--which)
+  - [Command:  find](#command--find)
+- [TEXT AND FILE MANIPULATION](#text-and-file-manipulation)
+  - [Command:  mkdir](#command--mkdir)
+  - [Command:  mv](#command--mv)
+  - [Command:  cp](#command--cp)
+  - [Command:  rm](#command--rm)
+  - [Command:  rmdir](#command--rmdir)
+  - [Command:  file](#command--file)
+  - [Command:  cat](#command--cat)
+  - [Command:  head](#command--head)
+  - [Command:  tail](#command--tail)
+  - [Command:  nl](#command--nl)
+  - [Command:  more and less](#command--more-and-less)
+  - [Command: grep](#command-grep)
+  - [Command: df](#command-df)
+  - [Command: du](#command-du)
+- [ENVIRONMENT VARIABLE CONTROLS](#environment-variable-controls)
+  - [Command: env](#command-env)
+  - [Command: echo](#command-echo)
+  - [Command: export](#command-export)
+- [REDIRECTION](#redirection)
+  - [Command: \>](#command-)
+  - [Command: \>\>](#command--1)
+  - [redirect standard errors to an output](#redirect-standard-errors-to-an-output)
+  - [combining files](#combining-files)
+- [PIPELINES](#pipelines)
+- [Modify file permissions](#modify-file-permissions)
+  - [reading permissions](#reading-permissions)
+  - [Command: chown](#command-chown)
+  - [Command: chgrp](#command-chgrp)
+  - [Command: chmod](#command-chmod)
+- [Network commands](#network-commands)
+  - [Command: ifconfig](#command-ifconfig)
+  - [Command: ping](#command-ping)
+  - [Command: traceroute](#command-traceroute)
+    - [Command: ssh](#command-ssh)
+  - [Command: hostname](#command-hostname)
+  - [Command: process](#command-process)
+  - [Command: history](#command-history)
+  - [Command: ssh-copy-id](#command-ssh-copy-id)
+- [BASH SCRIPTING](#bash-scripting)
+  - [Make an executable command from your bash script](#make-an-executable-command-from-your-bash-script)
+- [VARIABLES IN BASH](#variables-in-bash)
+  - [Single vs double quotes](#single-vs-double-quotes)
+  - [Constants](#constants)
+  - [Doing maths](#doing-maths)
+- [Conditional statement](#conditional-statement)
+  - [Command: read](#command-read)
+- [case statements](#case-statements)
+- [Functions](#functions)
+- [Loops](#loops)
+
+
 ## Finding out info for a bash command
 
 descriptions and flags found using the commands for help and manual
@@ -17,6 +82,7 @@ dont use sudo every command - sudo is super use command temporarily
 * The Debian project maintains an official repository holding thousands of software packages which APT users can install via the apt command-line program and a network connection. Users can also install packages from third-party repositories as well as locally-stored repositories.
 ## updating packages list
 > sudo apt update -y
+
 why do we need to update everytime?
 ## upgrading packages (potential break)
 this is where linux system can break because of package versions not being compatible
@@ -25,9 +91,11 @@ this is where linux system can break because of package versions not being compa
 ## how to become superuser for multi cmds
 Command below goes to the top of your directory with the os related files here, this is the root directory
 > cd /
-> 
+
 ## login as root user now
 > sudo su
+
+you should see your hostname shange to `root` and then to exit out of su('root') just enter `exit`  in terminal at the end
 
 # Navigation: 
 full stop means current directory `/.`
