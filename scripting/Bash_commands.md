@@ -1,6 +1,7 @@
        #cheatsheet #linux  #cloud
 
-- [root in linux](#root-in-linux)
+- [Finding out info for a bash command](#finding-out-info-for-a-bash-command)
+- [Working in linux](#working-in-linux)
   - [Advanced Package Tool](#advanced-package-tool)
   - [updating packages list](#updating-packages-list)
   - [upgrading packages (potential break)](#upgrading-packages-potential-break)
@@ -76,7 +77,7 @@
 - [Loops](#loops)
 
 
-## Finding out info for a bash command
+# Finding out info for a bash command
 
 descriptions and flags found using the commands for help and manual
 > Examplecmd --help
@@ -84,7 +85,7 @@ descriptions and flags found using the commands for help and manual
 
 TODO: check how to use pushd and popd for advanced navigating 
 
-# root in linux
+# Working in linux 
 Root in linux is the super user
 dont use sudo every command - sudo is super use command temporarily
 ## Advanced Package Tool
