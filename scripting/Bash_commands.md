@@ -1,6 +1,7 @@
        #cheatsheet #linux  #cloud
 
-- [Advanced Package Tool](#advanced-package-tool)
+- [root in linux](#root-in-linux)
+  - [Advanced Package Tool](#advanced-package-tool)
   - [updating packages list](#updating-packages-list)
   - [upgrading packages (potential break)](#upgrading-packages-potential-break)
   - [how to become superuser for multi cmds](#how-to-become-superuser-for-multi-cmds)
@@ -47,14 +48,24 @@
   - [Command: ifconfig](#command-ifconfig)
   - [Command: ping](#command-ping)
   - [Command: traceroute](#command-traceroute)
-    - [Command: ssh](#command-ssh)
+  - [Command: ssh](#command-ssh)
   - [Command: hostname](#command-hostname)
+- [Processes](#processes)
   - [Command: process](#command-process)
+  - [Command: kill](#command-kill)
+  - [Command: top](#command-top)
+  - [Command: sleep](#command-sleep)
+  - [Command: jobs](#command-jobs)
+  - [Command: systemctl](#command-systemctl)
+- [Other commands](#other-commands)
   - [Command: history](#command-history)
   - [Command: ssh-copy-id](#command-ssh-copy-id)
 - [BASH SCRIPTING](#bash-scripting)
   - [Make an executable command from your bash script](#make-an-executable-command-from-your-bash-script)
 - [VARIABLES IN BASH](#variables-in-bash)
+  - [Variables in bash](#variables-in-bash-1)
+  - [Environment variable stored in bash](#environment-variable-stored-in-bash)
+    - [Make environment variable Persistent](#make-environment-variable-persistent)
   - [Single vs double quotes](#single-vs-double-quotes)
   - [Constants](#constants)
   - [Doing maths](#doing-maths)
@@ -73,10 +84,10 @@ descriptions and flags found using the commands for help and manual
 
 TODO: check how to use pushd and popd for advanced navigating 
 
-## root in linux
+# root in linux
 Root in linux is the super user
 dont use sudo every command - sudo is super use command temporarily
-# Advanced Package Tool
+## Advanced Package Tool
 **What is APT?**  
 * Collection of tools used to install, update, remove, and otherwise manage software packages on Debian
 * The Debian project maintains an official repository holding thousands of software packages which APT users can install via the apt command-line program and a network connection. Users can also install packages from third-party repositories as well as locally-stored repositories.
@@ -351,7 +362,7 @@ the `-c` option, which will allow you to specify the number of packets to requ
 
 ## Command: traceroute
 
-### Command: ssh
+## Command: ssh
 connection can also be used for terminal access, file transfers, and for tunneling other applications.
 > ssh alternative-username@sample.ssh.com
 
@@ -360,9 +371,46 @@ The **hostname** is what a device is called on a network. The hostname is used
 this command will display the IP address(es) assigned to your
 >hostname -I
 
+# Processes
 ## Command: process
 process associated with a terminal session can be found with the command below 
 > ps -p $$
+>
+the command usually shows user processes that we have run 
+tty column has the id values of which bash terminal process is runing from lets you identify which bash session they are runing on
+
+to see all system processes and extended info
+> ps aux
+
+every process after process 1 has a parent process meaning they were all started by another process. like a chain 
+
+## Command: kill
+to kill a process with differernt levels there are 64 levels -1 to -64 the different strengths are not based on number order 
+hangup signal =  `kill -1 2512` 2512 is a 'process id' in this example
+terminate = `kill 2512` deafult signal level here is 15 
+brute force = `kill -9 2512` 
+
+harsher kills could cause zombie processes if parent processes are killed without a graceful shutdown for child processes 
+
+## Command: top
+its like a task manager view that shows processes and cpu
+orders by the most cpu usasge at top
+shift m order by memory at top
+shift n order by newest process at top
+
+## Command: sleep
+gives a delay `sleep 3` will pause for 3 seconds
+`sleep 5000 &` will give use a process id and run in the background
+
+## Command: jobs
+can show the process in the background
+`jobs -l` for more info
+
+## Command: systemctl
+systemctl: This is the command used to control and interact with the systemd system and service manager, which manages services on Linux systems.
+`systemctl restart nginx`
+
+# Other commands
 
 ## Command: history
 showws a list of cmds you ran in linux, stored in the bash.
@@ -401,6 +449,8 @@ Once you make a script you can move it to a directory in your $PATH variable
 
 # VARIABLES IN BASH
 
+## Variables in bash 
+
 > hello_message='Hello Worlds!'
 > echo $hello_message
 
@@ -408,6 +458,22 @@ if you want to assign the output of a command to a variable, you can in bash
 
 > current_dir=$(pwd)
 > echo $current_dir
+
+## Environment variable stored in bash
+
+prints out all of the env variables
+> printenv
+
+checks the single env for pwd variable
+> printenv PWD 
+
+set an env var
+> export MYNAME=raiyan
+> printenv MYNAME
+
+### Make environment variable Persistent
+login in sssh .bashrc file also loads in 
+set env var in that file you will then have a persistent environment variable
 
 
 ## Single vs double quotes
