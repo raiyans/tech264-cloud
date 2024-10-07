@@ -57,4 +57,71 @@ echo Done!
     * scp
     * -i
     * path destination
+2. Better Alternative is using rsync 
+   * `sudo apt update`
+   * `sudo apt install rsync`
+   * Then run `rsync -avz -e "ssh -i ~/.ssh/tech264-raiyan-az-key" /path/to/local/folder/ adminuser@20.0.184.151:/path/to/remote/folder/`
+
 3. then cd into folder and then run `npm install` and `npm start` or `node app.js`
+
+# database vm
+
+1. private subnet
+create the vm and name it tech-264-raiyan-run-db
+ports open, not http need ssh only
+personal key 
+
+2. sudo apt update and upgrade
+* mongodb to install
+3. get the gpg package
+`sudo apt-get install gnupg curl`
+checks if package is aunthentic  
+```bash
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor
+   ```
+
+4. create a sources list file of the 
+``` bash
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+```
+
+
+* do another update `sudo apt-get update -y`
+
+5. install the mongodb server 
+
+``` sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=2.1.5 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6 ```
+
+
+6. check if mongo is active
+`sudo systemctl status mongod`
+
+## start mongodb
+`sudo `
+
+7. edit config mongo file
+ `sudo nano /etc/mongod.conf`
+ change bind ip from 127.0.0.0 to 0.0.0.0 to accept connections from any ip address
+
+8. restart to let it start back up everytime vm restarts
+`sudo systemctl restart mongod`
+`sudo systemctl is-enabled mongod`
+`sudo systemctl enable mongod`
+
+
+
+# switch to the app vm
+1. go cd into app
+* use private ip first if available before using public ip
+
+2. we will make an env variable for the db string to connect to 
+`export DB_HOST=mongodb://10.0.3.4:27017/posts`
+3. check env var is set
+`printenv DB_HOST`
+
+4. run npm install and you should see database is seeded in the logs
+
+now you can see the posts sourced from the db on the node app with the public ip and port 3000 for the node app vm
+http://20.0.184.151:3000/posts
