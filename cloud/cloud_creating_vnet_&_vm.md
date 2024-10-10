@@ -21,24 +21,26 @@
 
 
 * create vnet with 2 subnets and have a vm in both
-### Steps we tookn to make vnet
+# Steps we took to make vnet
 1. Search for create Vnet
 2. Set the name of subscription and resource group
 3. Set the virtual networking name (e.g tech264-..)
 4. Region : (Europe)Uk South
 5. Check Security 
 6. IP addresses 
-- add subsets and set their IP address range(only IPv4): 
+- add subsets and set their IP address range(only IPv4) (e.g 10.0.0.0/16): 
   - name
   - starting address
   - size
-1. Tags :
+7. choose to make defualt subnet a public one with range of 10.0.2.0/24
+8. make private subnet with 10.0.3.0/24
+9. Tags :
    - Name : Owner
    - Value : My name
 
-2. Review + create   
-3.  Click create
-4.  
+10. Review + create   
+11. Click create
+12. 
 
 plan to create a VM:
 * Virtual network + subnet

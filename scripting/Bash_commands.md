@@ -28,12 +28,14 @@
   - [Command:  nl](#command--nl)
   - [Command:  more and less](#command--more-and-less)
   - [Command: grep](#command-grep)
+  - [Command: sed](#command-sed)
   - [Command: df](#command-df)
   - [Command: du](#command-du)
 - [ENVIRONMENT VARIABLE CONTROLS](#environment-variable-controls)
   - [Command: env](#command-env)
   - [Command: echo](#command-echo)
   - [Command: export](#command-export)
+  - [Command: source](#command-source)
 - [REDIRECTION](#redirection)
   - [Command: \>](#command-)
   - [Command: \>\>](#command--1)
@@ -109,6 +111,9 @@ Command below goes to the top of your directory with the os related files here, 
 
 you should see your hostname shange to `root` and then to exit out of su('root') just enter `exit`  in terminal at the end
 
+
+
+- how to naigte to root file? like this `cd /`
 # Navigation: 
 full stop means current directory `/.`
 
@@ -222,6 +227,18 @@ and use search params
 to parse though and match a result in a text file 
 > grep "123.26.119.140" fake002.log
 
+## Command: sed
+1. Find and Replace Text, The most common usage of sed is to search for and replace text in a file.
+2. To modify a file directly (without outputting the changes to the terminal), you use the -i option.
+3. By default, sed will only replace the first occurrence of a pattern on each line. If you want to replace all occurrences of a pattern on a line, you use the g flag at the end
+```bash
+ sed 's/old_text/new_text/' file.txt # To modify a file directly (without outputting the changes to the terminal), you use the -i option.
+ sed -i 's|/old/path|/new/path|' config.txt # When replacing paths or URLs, it's common to use | instead of / as the delimiter to avoid conflicts with slashes in the paths.
+ sed '/pattern/a new_text' # file.txt You can insert text after a specific pattern.
+ sed '/pattern/d' file.txt # delete text
+ sed '/pattern/g' file.txt # global
+```
+
 ## Command: df 
 The `df` = "disk-free," and shows available and used disk space on system
 > df -h -a
@@ -262,7 +279,9 @@ It would effect every user logged in the machine
 ".profile",".bashrc" files can be edited and will be loaded into every different session
 would be a different effect for every user in a machine
 
-
+## Command: source
+lets your update your env variables in the same bash session without closing 
+```source .bashrc```
 
 # REDIRECTION 
 
