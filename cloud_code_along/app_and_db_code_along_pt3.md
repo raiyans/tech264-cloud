@@ -1,3 +1,10 @@
+- [plan app+db image](#plan-appdb-image)
+- [**app userdata script**](#app-userdata-script)
+- [**db userdata script**](#db-userdata-script)
+- [How to create image](#how-to-create-image)
+- [script to rerun app vm from image](#script-to-rerun-app-vm-from-image)
+
+
 ## plan app+db image
 1. created db vm using custom image
 2. Tested user data did its job
@@ -174,7 +181,7 @@ echo Done!
 2. Under **Instance details**, Select **No, capture only a managed image**.
 3. Enable **Automatically delete this virtual machine after creating the image**.
 4. Name image appropriately.
-5. Run `sudo waagent -deprovision+user` inside our DB SSH to remove delete information we no longer need, then return to Azure window.
+5. **Important** Run `sudo waagent -deprovision+user` inside our DB SSH to remove delete information we no longer need, then return to Azure window.
 6. Add tags.
 7. Review, then create.
 
@@ -186,7 +193,7 @@ echo Done!
 #!/bin/bash
  
 #Set MongoDB connecting string
-export DB_HOST="mongodb://10.0.3.5:27017/posts"  # CHANGE THIS IF NOT THE SAME DB IP
+export DB_HOST="mongodb://10.0.3.4:27017"  # IMPORTANT CHANGE THIS IF NOT THE SAME DB IP
  
 # CD into app directory
 echo "Change directory to app"

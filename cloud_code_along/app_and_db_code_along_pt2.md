@@ -1,3 +1,20 @@
+- [Running, Stopping, and Restarting a Node.js App in the Background](#running-stopping-and-restarting-a-nodejs-app-in-the-background)
+  - [1. Running the App Using `&` (Background Execution)](#1-running-the-app-using--background-execution)
+    - [Command:](#command)
+    - [Explanation:](#explanation)
+    - [Issues with `&`:](#issues-with-)
+  - [2. Running the App Using `pm2`](#2-running-the-app-using-pm2)
+    - [Steps to Use `pm2`:](#steps-to-use-pm2)
+    - [Benefits of `pm2`:](#benefits-of-pm2)
+  - [3. Running the App Using `forever` (Alternative to `pm2`)](#3-running-the-app-using-forever-alternative-to-pm2)
+    - [Steps to Use `forever`:](#steps-to-use-forever)
+    - [Benefits of `forever`:](#benefits-of-forever)
+  - [4. Script Integration with `pm2`](#4-script-integration-with-pm2)
+    - [Steps to Modify Your Script to Use `pm2`:](#steps-to-modify-your-script-to-use-pm2)
+  - [Conclusion](#conclusion)
+- [automate reverse proxy into our bash script](#automate-reverse-proxy-into-our-bash-script)
+  - [**To look for logs when user data worked**](#to-look-for-logs-when-user-data-worked)
+
 ## Task: How many services can use a port?
 ### Objective
 To demonstrate the behavior of running the Sparta application in two different Git Bash terminals on the same virtual machine (VM) and resolve the resulting error due to port conflicts.
@@ -25,7 +42,6 @@ When you try to run the Sparta app in the second terminal, you will receive an e
 Error: listen EADDRINUSE: address already in use ::1:3000
 ```
 
- 
 ### Explanation of the Error
 This error occurs because both instances of the Sparta app are trying to bind to the same port (3000). When the first instance is already running and listening on that port, the second instance cannot start.
  

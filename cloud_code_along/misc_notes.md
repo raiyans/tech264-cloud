@@ -16,7 +16,7 @@ turn userdata into a system control service
 
 
 
-
+**Important**
 1. Share image to Azure compute gallery
     - choose: No, capture only a managed image.
 2. waagent -deprovision+user"

@@ -1,3 +1,16 @@
+- [Code Along](#code-along)
+  - [Deleting Your Virtual Machine](#deleting-your-virtual-machine)
+  - [How to run script with no user input](#how-to-run-script-with-no-user-input)
+  - [how to copy node app folder from local to vm with ssh](#how-to-copy-node-app-folder-from-local-to-vm-with-ssh)
+  - [Database vm](#database-vm)
+  - [Start mongodb](#start-mongodb)
+  - [db script with all the doing the manual steps](#db-script-with-all-the-doing-the-manual-steps)
+  - [switch to the app vm](#switch-to-the-app-vm)
+  - [Reverse proxy](#reverse-proxy)
+    - [Why Create a Reverse Proxy for Your App?](#why-create-a-reverse-proxy-for-your-app)
+  - [misc](#misc)
+
+
 # Code Along
 
 **Before starting lets delete vm from previous works**
@@ -218,6 +231,10 @@ http://20.0.184.151:3000/posts
 
 
 ## Reverse proxy
+
+### Why Create a Reverse Proxy for Your App?
+A reverse proxy serves as an intermediary for clients requesting resources from your backend servers (like a Node.js app). In this case, you are setting up Nginx as a reverse proxy to forward incoming requests to your Node.js application running on port 3000, while allowing users to access the app without specifying the port in the URL.
+
 
 1. check nginx is running `sudo systemctl status nginx`
 2. `sudo nano /etc/nginx/sites-available/default` go into this confgi file
