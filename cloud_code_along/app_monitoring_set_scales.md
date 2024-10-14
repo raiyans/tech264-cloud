@@ -37,6 +37,7 @@ A **Load Balancer** distributes incoming network traffic across multiple VM inst
 - Traffic is balanced across multiple instances.
 - Redundancy in case of VM failure.
 - Health monitoring and automatic failover for unhealthy instances.
+- you can notice ip address change when page is refreshed page 
 
 ### Health Probes
 Azure uses **health probes** to monitor the state of each instance in the scale set. If an instance is unhealthy (e.g., does not respond to HTTP requests), the load balancer stops sending traffic to it until it is marked healthy again.
@@ -133,7 +134,7 @@ Azure uses **health probes** to monitor the state of each instance in the scale 
    echo "App started with PM2"
    ```
 
-This script ensures that your application starts automatically on each VM instance.
+This script ensures that your application starts automatically on each VM instance. I could try to kill processes if needed instead of stopping
 
 ---
 
