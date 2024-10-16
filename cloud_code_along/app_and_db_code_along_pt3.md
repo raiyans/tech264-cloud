@@ -34,7 +34,7 @@
 ```bash
 #!/bin/bash
 
-GITHUB_REPO="https://github.com/GP-Stanley/tech264-sparta-app"
+GITHUB_REPO="https://github.com/raiyans/example-node-app.git"
 REPO_FOLDER="repo"
 NGINX_CONF="/etc/nginx/sites-available/default"
 BACKUP_CONF="/etc/nginx/sites-available/default.bak"
