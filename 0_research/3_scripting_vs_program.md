@@ -1,4 +1,8 @@
 # Scripting 
+- [Scripting](#scripting)
+  - [Scripting vs Programming](#scripting-vs-programming)
+  - [Programming](#programming)
+  - [how to run python command?](#how-to-run-python-command)
 
 ## Scripting vs Programming
  
@@ -26,6 +30,6 @@
 
 ## how to run python command?
 
-- in terminal write `python test.py hi.json`  [run script](scripting\test_for_args.py)
+- in terminal write `python test.py hi.json`  [run script](/script_reference/test_for_args.py)
 - sys.argv contains all the arguements, sys.argv[0] is euql to 'test.py'
 - python is the interpretter

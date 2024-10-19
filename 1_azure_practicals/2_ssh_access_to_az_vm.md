@@ -1,4 +1,4 @@
-# steps to produce ssh key
+# Steps to produce ssh key
 
 1. navigate to root by just typing `cd`
 2. find or creat `./ssh` folder
@@ -10,7 +10,7 @@
 5. `cat tech264-raiyan-az-key | pbcopy` to clipboard
 6. go to ssh section to your vm and and paste key
 
-# steps to access vm on azure
+# Steps to access vm on azure
 * vm was setup witha kay pair that we stored earlier in azure and will use that again 
 1. go to vm and then go to connect section 
 2. choose the native ssh option

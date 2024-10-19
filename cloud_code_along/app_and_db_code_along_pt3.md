@@ -1,11 +1,11 @@
-- [plan app+db image](#plan-appdb-image)
+- [Launch app+db image](#launch-appdb-image)
 - [**app userdata script**](#app-userdata-script)
 - [**db userdata script**](#db-userdata-script)
 - [How to create image](#how-to-create-image)
 - [script to rerun app vm from image](#script-to-rerun-app-vm-from-image)
 
 
-## plan app+db image
+## Launch app+db image
 1. created db vm using custom image
 2. Tested user data did its job
 3. create app vm using custom image and user data to run the entire app script

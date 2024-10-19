@@ -1,12 +1,13 @@
+## nginx install
+
+- systemctl: This is the command used to control and interact with the systemd system and service manager, which manages services on Linux systems.
+
+```bash 
 sudo apt install nginx -y
 sudo systemctl status nginx
 sudo systemctl restart nginx
 sudo systemctl enable nginx
-
-systemctl: This is the command used to control and interact with the systemd system and service manager, which manages services on Linux systems.
-
-### steps
-
+```
 
 ## steps to provision nginx
  
