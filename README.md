@@ -1,9 +1,41 @@
-# tech264-cloud
+# Table of Contents
 
-## Contents
-- [Bash commands](scripting/Bash_commands.md)
-- [Scripting vs Programming](scripting/scripting_vs_program.md)
-- [SSH into Azure](scripting/ssh_access_to_azure.md)
-- [Cloud architecture](cloud/cloud_structure.md)
-- [Cloud research](cloud/research_cloud.md)
+Below is a list of all markdown files in this repository, sorted alphanumerically:
+
+## 0 Research
+
+- [0_cloud_vs_onprem.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/0_cloud_vs_onprem.md)
+- [1_azure_platform_fundamentals.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/1_azure_platform_fundamentals.md)
+- [3_scripting_vs_program.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/3_scripting_vs_program.md)
+- [4_0_linux_bash_commands.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/4_0_linux_bash_commands.md)
+- [4_1_linux_file_ownership_and_permissions.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/4_1_linux_file_ownership_and_permissions.md)
+- [5_monolith_architecture_vs_2_tier.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_monolith_architecture_vs_2_tier.md)
+- [6_images.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/6_images.md)
+- [7_autoscaling_and_availability.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/7_autoscaling_and_availability.md)
+- [8_securing_db.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/8_securing_db.md)
+- [9_az_vs_aws.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/9_az_vs_aws.md)
+
+
+## 1 Azure Practicals
+
+- [0_create_vn_with_2_subnets.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/0_create_vn_with_2_subnets.md)
+- [1_create_delete_vm.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/1_create_delete_vm.md)
+- [2_ssh_access_to_az_vm.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/2_ssh_access_to_az_vm.md)
+- [3_0_two_subnet_practical.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/3_0_two_subnet_practical.md)
+- [3_1_automated_two_subnet_practical.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/3_1_automated_two_subnet_practical.md)
+- [4_0_vm_scale_sets.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/4_0_vm_scale_sets.md)
+- [4_1_monitoring_vms.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/4_1_monitoring_vms.md)
+- [4_2_load_testing.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/4_2_load_testing.md)
+- [5_0_two_tier_deploy_with_3_subnets.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/5_0_two_tier_deploy_with_3_subnets.md)
+- [6_0_blob_storage.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/6_0_blob_storage.md)
+
+
+## 2 Aws Practical
+
+- [0_two_tier_deploy_with_1_subnet.md](https://github.com/raiyans/tech264-cloud/blob/main/2_aws_practical/0_two_tier_deploy_with_1_subnet.md)
+
+
+## Script Reference
+
+- [how_to_run_bash_script.md](https://github.com/raiyans/tech264-cloud/blob/main/script_reference/how_to_run_bash_script.md)
 
