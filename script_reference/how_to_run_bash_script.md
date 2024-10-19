@@ -9,7 +9,7 @@ sudo systemctl restart nginx
 sudo systemctl enable nginx
 ```
 
-## steps to provision nginx
+## steps to run a bash script
  
 1. use `nano provision.sh` to begin creating your `provision.sh` file, which will host the script.
 2. In the nano interface, write the following lines (be sure to write comments using `#` to help with understanding):
