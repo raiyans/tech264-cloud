@@ -5,6 +5,7 @@ Below is a list of all markdown files in this repository, contents generated and
 ## 0 Research
 
 - [0_cloud_vs_onprem.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/0_cloud_vs_onprem.md)
+- [10_cicd.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/10_cicd.md)
 - [1_azure_platform_fundamentals.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/1_azure_platform_fundamentals.md)
 - [3_scripting_vs_program.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/3_scripting_vs_program.md)
 - [4_0_linux_bash_commands.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/4_0_linux_bash_commands.md)
@@ -18,9 +19,9 @@ Below is a list of all markdown files in this repository, contents generated and
 
 ## 1 Azure Practicals
 
-- [0_create_vn_with_2_subnets.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/0_create_vn_with_2_subnets.md)
-- [1_create_delete_vm.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/1_create_delete_vm.md)
-- [2_ssh_access_to_az_vm.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/2_ssh_access_to_az_vm.md)
+- [0_0_create_vn_with_2_subnets.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/0_0_create_vn_with_2_subnets.md)
+- [1_0_create_delete_vm.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/1_0_create_delete_vm.md)
+- [2_0_ssh_access_to_az_vm.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/2_0_ssh_access_to_az_vm.md)
 - [3_0_two_subnet_practical.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/3_0_two_subnet_practical.md)
 - [3_1_automated_two_subnet_practical.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/3_1_automated_two_subnet_practical.md)
 - [4_0_vm_scale_sets.md](https://github.com/raiyans/tech264-cloud/blob/main/1_azure_practicals/4_0_vm_scale_sets.md)
@@ -33,6 +34,13 @@ Below is a list of all markdown files in this repository, contents generated and
 ## 2 Aws Practical
 
 - [0_two_tier_deploy_with_1_subnet.md](https://github.com/raiyans/tech264-cloud/blob/main/2_aws_practical/0_two_tier_deploy_with_1_subnet.md)
+
+
+## 3 Cicd Pipelines
+
+- [0_0_create_ssh_to_github.md](https://github.com/raiyans/tech264-cloud/blob/main/3_cicd_pipelines/0_0_create_ssh_to_github.md)
+- [1_0_jenkins_job.md](https://github.com/raiyans/tech264-cloud/blob/main/3_cicd_pipelines/1_0_jenkins_job.md)
+- [1_1_jenkins_3_pipelines.md](https://github.com/raiyans/tech264-cloud/blob/main/3_cicd_pipelines/1_1_jenkins_3_pipelines.md)
 
 
 ## Script Reference

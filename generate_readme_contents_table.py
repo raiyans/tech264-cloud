@@ -25,7 +25,8 @@ directories = [
     "0_research",
     "1_azure_practicals",
     "2_aws_practical",
-    "script_reference"
+    "3_cicd_pipelines",
+    "script_reference",
 ]
 
 # Prepare a list to store the markdown lines
