@@ -1,20 +1,22 @@
-- [automate reverse proxy into our bash script](#automate-reverse-proxy-into-our-bash-script)
-  - [Key Things to Know About User Data:](#key-things-to-know-about-user-data)
-  - [**To look for logs when user data worked**](#to-look-for-logs-when-user-data-worked)
-- [Levels of Automation: Deploying our app on the cloud.](#levels-of-automation-deploying-our-app-on-the-cloud)
+# Automated App and DB with UserData and Images
+- [Automated App and DB with UserData and Images](#automated-app-and-db-with-userdata-and-images)
+    - [automate reverse proxy into our bash script](#automate-reverse-proxy-into-our-bash-script)
+    - [Key Things to Know About User Data:](#key-things-to-know-about-user-data)
+    - [**To look for logs when user data worked**](#to-look-for-logs-when-user-data-worked)
+  - [Levels of Automation: Deploying our app on the cloud.](#levels-of-automation-deploying-our-app-on-the-cloud)
     - [1. Manual Deployment (No Automation)](#1-manual-deployment-no-automation)
     - [2. Scripted Deployment (Basic Automation)](#2-scripted-deployment-basic-automation)
     - [3. Infrastructure as Code (Full Automation)](#3-infrastructure-as-code-full-automation)
     - [4. Continuous Deployment (Full Automation + Continuous Integration)](#4-continuous-deployment-full-automation--continuous-integration)
-- [Images:](#images)
-  - [How You Use Images:](#how-you-use-images)
-- [Launch app+db Image](#launch-appdb-image)
-  - [**app userdata script**](#app-userdata-script)
-  - [**db userdata script**](#db-userdata-script)
-  - [How to create image](#how-to-create-image)
+  - [Images:](#images)
+    - [How You Use Images:](#how-you-use-images)
+  - [Launch app+db Image](#launch-appdb-image)
+    - [**app userdata script**](#app-userdata-script)
+    - [**db userdata script**](#db-userdata-script)
+    - [How to create image](#how-to-create-image)
   - [script to rerun app vm from image](#script-to-rerun-app-vm-from-image)
 
-# automate reverse proxy into our bash script 
+### automate reverse proxy into our bash script 
 - [Initialize Nginx Configs](/script_reference/3_1_initialize_nginx_configs_script.sh)
 ```bash
 # Nginx configuration changes
@@ -40,7 +42,7 @@ sudo systemctl status nginx | grep "active (running)"
 echo Done! Now test in the browser without :3000.
 ```
 
-## Key Things to Know About User Data:
+### Key Things to Know About User Data:
 1. The Script Runs as Root:
    * The script runs with **root** (admin) privileges, so you don’t need to use `sudo` for commands in your script.
    * It starts from the **root directory** (`/`), which is the top of the file system. So, when you clone a repository (like from GitHub), make sure to specify where you want it to go.
@@ -65,13 +67,13 @@ echo Done! Now test in the browser without :3000.
      * If there are errors, you’ll need to manually fix them later, so it’s good to test the script in small parts to ensure everything works.
 
 
-## **To look for logs when user data worked**
+### **To look for logs when user data worked**
 
 - you can run `sudo systemctl status mongod` to see mongodb is running
 - you can run `sudo cat /var/log/cloud-init-output.log` to see logs of userdata running
 - you can run `cat /etc/mongod.conf | grep bindIp`
 
-# Levels of Automation: Deploying our app on the cloud.
+## Levels of Automation: Deploying our app on the cloud.
 1. `Manual Deployment`: Everything is done manually, time-consuming and prone to errors.
 2. `Scripted Deployment`: Use scripts to automate setup tasks, faster but still involves some manual steps.
 3. `Infrastructure as Code` (IaC): Automate the creation of infrastructure and deployment of apps, highly scalable and replicable.
@@ -153,7 +155,7 @@ Cons:
 * Requires knowledge of CI/CD tools and processes.
 
 
-# Images: 
+## Images: 
 * We've been using Ubuntu Pro 22 (a market place image). 
 * We've been using a market place image to create our Vms.
   * The image determines everything thats going to go on the disk.
@@ -164,7 +166,7 @@ Cons:
   * they want to have info on the original market place image that you included. 
   * To solve this: don't use the one from ubuntu, we'll be using a custom marketplace image that Ramon has set up. `ramon-official-ubuntu2204-clean-image`
 
-## How You Use Images:
+### How You Use Images:
 * When you want to create a VM, you **select an image** from Azure's image gallery (like choosing "Ubuntu 22.04" or "Windows Server 2022").
 * Azure **uses that image to build your VM**, meaning the **VM will have** all the **software and configurations from the image**, so you **don’t need to set it up manually**.
 
@@ -173,7 +175,7 @@ Cons:
 [link to more images info](/0_research/6_images.md)
 
 
-# Launch app+db Image
+## Launch app+db Image
 1. created db vm using custom image
 2. Tested user data did its job
 3. create app vm using custom image and user data to run the entire app script
@@ -198,7 +200,7 @@ Cons:
    - posts page to work connecting to database VM made from image
 
 
-## **app userdata script**
+### **app userdata script**
 - [Initialize App script](/script_reference/3_1_initialize_app_script.sh)
 ```bash
 #!/bin/bash
@@ -278,7 +280,7 @@ pm2 list
 -
 -
 ---
-## **db userdata script**
+### **db userdata script**
 
 - [Initialize DB script](/script_reference/3_1_initialize_db_script.sh)
 
@@ -346,7 +348,7 @@ sudo systemctl start mongod
 echo Done!
 ```
 
-## How to create image
+### How to create image
 
 1. Select **Capture Image** on the VM of choice's **Overview**.
 2. Under **Instance details**, Select **No, capture only a managed image**.

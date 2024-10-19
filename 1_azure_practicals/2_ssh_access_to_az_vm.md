@@ -1,4 +1,6 @@
 # Steps to produce ssh key
+- [Steps to produce ssh key](#steps-to-produce-ssh-key)
+- [Steps to access vm on azure](#steps-to-access-vm-on-azure)
 
 1. navigate to root by just typing `cd`
 2. find or creat `./ssh` folder

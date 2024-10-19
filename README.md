@@ -1,6 +1,6 @@
 # Table of Contents
 
-Below is a list of all markdown files in this repository, sorted alphanumerically:
+Below is a list of all markdown files in this repository, contents generated and sorted from generate_readme_contents_table.py:
 
 ## 0 Research
 

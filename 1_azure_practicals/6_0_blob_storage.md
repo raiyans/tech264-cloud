@@ -1,6 +1,6 @@
-# Blob storage 
+# Blob Storage 
 
-- [Blob storage](#blob-storage)
+- [Blob Storage](#blob-storage)
   - [***Creating a Blob Storage VM***](#creating-a-blob-storage-vm)
   - [***Making your blob storage file public***](#making-your-blob-storage-file-public)
     - [***Check the Blob on the Azure Portal***](#check-the-blob-on-the-azure-portal)

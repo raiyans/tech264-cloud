@@ -1,12 +1,14 @@
+# Virtual Machine Scale Sets
 
-- [How to Create and Manage a VM Scale Set on Azure](#how-to-create-and-manage-a-vm-scale-set-on-azure)
+- [Virtual Machine Scale Sets](#virtual-machine-scale-sets)
+  - [How to Create and Manage a VM Scale Set on Azure](#how-to-create-and-manage-a-vm-scale-set-on-azure)
   - [Overview](#overview)
     - [Load Balancer](#load-balancer)
     - [Health Probes](#health-probes)
-- [How to connect the VM app after you stop it and start again - using  SSH key](#how-to-connect-the-vm-app-after-you-stop-it-and-start-again---using--ssh-key)
-- [Dashboard VM](#dashboard-vm)
+  - [How to connect the VM app after you stop it and start again - using  SSH key](#how-to-connect-the-vm-app-after-you-stop-it-and-start-again---using--ssh-key)
+  - [Dashboard VM](#dashboard-vm)
   - [Steps to Create a VM Scale Set](#steps-to-create-a-vm-scale-set)
-  - [Diagram of set scale arcitecture](#diagram-of-set-scale-arcitecture)
+    - [Diagram of set scale arcitecture](#diagram-of-set-scale-arcitecture)
     - [Basics](#basics)
     - [Disks](#disks)
     - [Networking](#networking)
@@ -20,7 +22,7 @@
   - [Diagram of How it Works](#diagram-of-how-it-works)
 
 
-# How to Create and Manage a VM Scale Set on Azure
+## How to Create and Manage a VM Scale Set on Azure
 
 This document covers how to create an Azure VM Scale Set (VMSS), manage instances, use a load balancer, and test various scenarios such as unhealthy instances. Additionally, we will walk through how to test and connect to the scale set and how to delete it when no longer needed.
 
@@ -47,7 +49,7 @@ Azure uses **health probes** to monitor the state of each instance in the scale 
 
 ---
 
-# How to connect the VM app after you stop it and start again - using  SSH key
+## How to connect the VM app after you stop it and start again - using  SSH key
  
 1. Connect the `VM with SSH key`
 2. To see the `repo/app`- need to be in root directory  -> `cd /repo/app`
@@ -57,7 +59,7 @@ Azure uses **health probes** to monitor the state of each instance in the scale 
 
 ---
 
-# Dashboard VM
+## Dashboard VM
  
 1. In the `VM` -> `Overview`-> scroll down to where is:
 * Properties--Monitoring--Capabilities--Recommendations--Tutorials
@@ -70,7 +72,7 @@ Azure uses **health probes** to monitor the state of each instance in the scale 
 
 ## Steps to Create a VM Scale Set
 
-## Diagram of set scale arcitecture 
+### Diagram of set scale arcitecture 
 
 ![set scale](/images/set_scale-2.png)
 ![set scale](/images/Scale_Sets_diagram.png)

@@ -1,5 +1,15 @@
 # Azure Monitoring and Responding to Load/Traffic
-
+- [Azure Monitoring and Responding to Load/Traffic](#azure-monitoring-and-responding-to-loadtraffic)
+    - [Monitoring and Responding to Load/Traffic: Worst to Best](#monitoring-and-responding-to-loadtraffic-worst-to-best)
+  - [How the Dashboard Helped Us](#how-the-dashboard-helped-us)
+  - [Setting Up a Dashboard](#setting-up-a-dashboard)
+  - [Setting Up CPU Usage Alert](#setting-up-cpu-usage-alert)
+    - [Screenshot of Email Notification](#screenshot-of-email-notification)
+  - [Setting Up a Dashboard and alerts](#setting-up-a-dashboard-and-alerts)
+  - [Remove dashboards and alert and action group](#remove-dashboards-and-alert-and-action-group)
+    - [Removing a Dashboard](#removing-a-dashboard)
+    - [Removing an Alert Rule](#removing-an-alert-rule)
+    - [Removing an Action Group](#removing-an-action-group)
 
 ### Monitoring and Responding to Load/Traffic: Worst to Best
 

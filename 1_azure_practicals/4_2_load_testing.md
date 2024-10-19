@@ -1,3 +1,11 @@
+# Load Testing
+- [Load Testing](#load-testing)
+- [Load Testing Simulation](#load-testing-simulation)
+  - [How It Works](#how-it-works)
+  - [Why It’s Important](#why-its-important)
+    - [How Load Testing Helped Us](#how-load-testing-helped-us)
+    - [Creating an Unhealthy Instance (for Testing)](#creating-an-unhealthy-instance-for-testing)
+
 # Load Testing Simulation
 > Load testing simulation is a way to test how a system (like a website or application) performs under a specific amount of traffic or load.
 

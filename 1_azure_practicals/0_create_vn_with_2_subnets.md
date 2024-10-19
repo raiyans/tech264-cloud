@@ -1,4 +1,8 @@
 # Create Virtual Network and Subnet
+- [Create Virtual Network and Subnet](#create-virtual-network-and-subnet)
+  - [VN with VM's Diagram](#vn-with-vms-diagram)
+  - [Diagram of virtual netwokring trying to implement](#diagram-of-virtual-netwokring-trying-to-implement)
+  - [Steps we took to make vnet](#steps-we-took-to-make-vnet)
 
 ## VN with VM's Diagram
 ![cloud](/images/Cloud_architecture.png)

@@ -1,4 +1,13 @@
 # Create and Delete Virtual Machines
+- [Create and Delete Virtual Machines](#create-and-delete-virtual-machines)
+  - [Plan to create a VM](#plan-to-create-a-vm)
+  - [How to Create a Virtual Machine (VM)](#how-to-create-a-virtual-machine-vm)
+  - [--\> Disks](#---disks)
+  - [--\> Networking](#---networking)
+  - [--\> Tags](#---tags)
+  - [--\> Review and Create](#---review-and-create)
+- [Connecting Your Virtual Machine](#connecting-your-virtual-machine)
+  - [Deleting Your Virtual Machine](#deleting-your-virtual-machine)
 
 ## Plan to create a VM
 * Virtual network + subnet

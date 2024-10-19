@@ -33,7 +33,7 @@ markdown_lines = []
 
 # Header for the table of contents
 markdown_lines.append("# Table of Contents\n")
-markdown_lines.append("Below is a list of all markdown files in this repository, sorted alphanumerically:\n")
+markdown_lines.append("Below is a list of all markdown files in this repository, contents generated and sorted from generate_readme_contents_table.py:\n")
 
 # Function to create the markdown links
 def create_markdown_link(directory, filename):
@@ -59,4 +59,4 @@ for directory in directories:
 with open("README.md", "w") as readme_file:
     readme_file.write("\n".join(markdown_lines))
 
-print("README.md table of contents generated and sorted from generate_readme_contents_table.py")
+print("README.md tc")
