@@ -5,7 +5,6 @@ Below is a list of all markdown files in this repository, contents generated and
 ## 0 Research
 
 - [0_cloud_vs_onprem.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/0_cloud_vs_onprem.md)
-- [10_cicd.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/10_cicd.md)
 - [1_azure_platform_fundamentals.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/1_azure_platform_fundamentals.md)
 - [3_scripting_vs_program.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/3_scripting_vs_program.md)
 - [4_0_linux_bash_commands.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/4_0_linux_bash_commands.md)
@@ -15,6 +14,7 @@ Below is a list of all markdown files in this repository, contents generated and
 - [7_autoscaling_and_availability.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/7_autoscaling_and_availability.md)
 - [8_securing_db.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/8_securing_db.md)
 - [9_az_vs_aws.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/9_az_vs_aws.md)
+- [10_0_cicd.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/10_0_cicd.md)
 
 
 ## 1 Azure Practicals
