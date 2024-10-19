@@ -1,5 +1,21 @@
 
 # Cloud Computing Overview
+- [Cloud Computing Overview](#cloud-computing-overview)
+  - [1. How do we know if something is in the cloud?](#1-how-do-we-know-if-something-is-in-the-cloud)
+  - [2. Differences between on-prem and the cloud](#2-differences-between-on-prem-and-the-cloud)
+  - [3. The 4 deployment models of cloud: Private vs Public vs Hybrid vs Multi-Cloud](#3-the-4-deployment-models-of-cloud-private-vs-public-vs-hybrid-vs-multi-cloud)
+  - [4. Types of cloud services: IaaS, PaaS, SaaS](#4-types-of-cloud-services-iaas-paas-saas)
+  - [5. Advantages/Disadvantages of the cloud for a business](#5-advantagesdisadvantages-of-the-cloud-for-a-business)
+  - [6. Difference between OpEx vs CapEx and how it relates to the cloud](#6-difference-between-opex-vs-capex-and-how-it-relates-to-the-cloud)
+  - [7. Is migrating to the cloud always cheaper?](#7-is-migrating-to-the-cloud-always-cheaper)
+  - [8. Market Share - Breakdown of Cloud Providers](#8-market-share---breakdown-of-cloud-providers)
+    - [Market Share Breakdown:](#market-share-breakdown)
+  - [9. What are the 3 largest cloud providers known for?](#9-what-are-the-3-largest-cloud-providers-known-for)
+  - [10. Which cloud provider might be the best? Why?](#10-which-cloud-provider-might-be-the-best-why)
+  - [11. What sorts of things do you usually need to pay for when using the cloud?](#11-what-sorts-of-things-do-you-usually-need-to-pay-for-when-using-the-cloud)
+  - [12. What are the 4 pillars of DevOps? How do they link into the Cloud?](#12-what-are-the-4-pillars-of-devops-how-do-they-link-into-the-cloud)
+  - [13. Case Studies of Cloud Migration](#13-case-studies-of-cloud-migration)
+    - [Takeaways](#takeaways)
 
 ## 1. How do we know if something is in the cloud?
 Something is considered "in the cloud" if it is hosted on external servers accessible via the internet rather than on local on-premise servers. Cloud services are managed by third-party providers and accessed through the internet, offering scalability, accessibility, and often lower costs due to shared resources. provided as a service with on demand service usually 

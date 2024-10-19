@@ -1,48 +1,6 @@
-# cloud diagram recreated
-* https://lucid.app/lucidchart/2e8e8991-8471-4bed-a4e6-10e3e2881810/edit?viewport_loc=-1087%2C-1714%2C2112%2C2469%2C0_0&invitationId=inv_54f48fdd-5e6d-4a6b-86b9-5a99b590c334
-  
-![cloud](Cloud_architecture.png)
+# Create and Delete Virtual Machines
 
-# diagram of virtual netwokring trying to implement
-
-```
-------------------------------------------------------------------
-|       vnet 10.0.0.0/16 = 65,000 addresses                      |
-------------------------------------------------------------------
-|        |   public-subnet   |    |    private subnet  |         |
-|        |   10.0.2.0/24     |    |   10.0.3.0/24      |         |
-|        |   (256 addresses) |    |   (256 adresses)   |         |
-|        ---------------------    ----------------------         |
-|        |       | vm |      |    |        | vm |      |         |
-|        |       ------      |    |        ------      |         |
-|        ---------------------    ----------------------         |
-------------------------------------------------------------------
-```
-
-
-* create vnet with 2 subnets and have a vm in both
-# Steps we took to make vnet
-1. Search for create Vnet
-2. Set the name of subscription and resource group
-3. Set the virtual networking name (e.g tech264-..)
-4. Region : (Europe)Uk South
-5. Check Security 
-6. IP addresses 
-- add subsets and set their IP address range(only IPv4) (e.g 10.0.0.0/16): 
-  - name
-  - starting address
-  - size
-7. choose to make defualt subnet a public one with range of 10.0.2.0/24
-8. make private subnet with 10.0.3.0/24
-9. Tags :
-   - Name : Owner
-   - Value : My name
-
-10. Review + create   
-11. Click create
-12. 
-
-plan to create a VM:
+## Plan to create a VM
 * Virtual network + subnet
 * Name
 * Location + pricing
@@ -50,9 +8,10 @@ plan to create a VM:
 * storage + pricing
 * OS + pricing
 * SSH key pair
-# How to Create a Virtual Machine (VM)
+
+
+## How to Create a Virtual Machine (VM)
  
-## Basics
 1. **Search** for Virtual Machine on the Azure Portal. Create a new VM.
 2. **Assign** resource group `(tech264)`.
 3. **Name** the VM (e.g tech264-name...)
@@ -90,6 +49,18 @@ plan to create a VM:
 7. A **warning** will come out once entered into your **GitBash**. Respond with `yes` and then it will permanently save the IP address, meaning we will not be given the warning again.
 8. You can type `exit` to **logout** of the Virtual Machine.
 
-
-# linux usage
-* many different distributions of linux, 
+## Deleting Your Virtual Machine
+1. Navigate to overview.
+2. Find your resource group.
+3. Filter your name. You will see multiple items appear.
+4. Tick `resourcegroupname-name-vmname`
+5. Tick `resourcegroupname-vmname-ip`
+6. Tick `resourcegroupname-vmname-nsg`
+7. Tick `resourcegroupname-name-networkinterface`
+8. Tick `resourcegroupname-name-Disk`
+9. Locate **delete**. Avoid deleting the **resource group**.
+10. Tick "Apply force delete" just to be safe.
+11. Enter "delete" in the input box and click **delete**.
+12. Select **delete** once more to confirm **deletion**.
+ 
+We leave the Virtual Network and SSH Key as they can be reuse

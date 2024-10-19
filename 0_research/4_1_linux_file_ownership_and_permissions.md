@@ -1,5 +1,26 @@
 
 # Managing File Ownership in Unix/Linux Systems
+- [Managing File Ownership in Unix/Linux Systems](#managing-file-ownership-in-unixlinux-systems)
+  - [1. Why is managing file ownership important?](#1-why-is-managing-file-ownership-important)
+  - [2. What is the command to view file ownership?](#2-what-is-the-command-to-view-file-ownership)
+  - [3. What permissions are set when a user creates a file or directory? Who does the file or directory belong to?](#3-what-permissions-are-set-when-a-user-creates-a-file-or-directory-who-does-the-file-or-directory-belong-to)
+  - [4. Why does the owner, by default, not receive execute (`x`) permissions when they create a file?](#4-why-does-the-owner-by-default-not-receive-execute-x-permissions-when-they-create-a-file)
+  - [5. What command is used to change the owner of a file or directory?](#5-what-command-is-used-to-change-the-owner-of-a-file-or-directory)
+- [Understanding File Permissions in Unix/Linux Systems](#understanding-file-permissions-in-unixlinux-systems)
+  - [1. Does being the owner of a file mean you have full permissions on that file? Explain.](#1-does-being-the-owner-of-a-file-mean-you-have-full-permissions-on-that-file-explain)
+  - [2. If you give permissions to the **User** entity, what does this mean?](#2-if-you-give-permissions-to-the-user-entity-what-does-this-mean)
+  - [3. If you give permissions to the **Group** entity, what does this mean?](#3-if-you-give-permissions-to-the-group-entity-what-does-this-mean)
+  - [4. If you give permissions to the **Other** entity, what does this mean?](#4-if-you-give-permissions-to-the-other-entity-what-does-this-mean)
+  - [5. Example Scenario: User permissions are read-only, Group permissions are read and write, Other permissions are read, write, and execute.](#5-example-scenario-user-permissions-are-read-only-group-permissions-are-read-and-write-other-permissions-are-read-write-and-execute)
+  - [6. Example from `ls -l`: -rwxr-xr-- 1 tcboony staff 123 Nov 25 18:36 keeprunning.sh](#6-example-from-ls--l--rwxr-xr---1-tcboony-staff-123-nov-25-1836-keeprunningsh)
+    - [Summary of Permissions:](#summary-of-permissions)
+- [Understanding Numeric File Permissions in Unix/Linux Systems](#understanding-numeric-file-permissions-in-unixlinux-systems)
+  - [1. What numeric values are assigned to each permission?](#1-what-numeric-values-are-assigned-to-each-permission)
+  - [2. What can you do with the values to assign read + write permissions?](#2-what-can-you-do-with-the-values-to-assign-read--write-permissions)
+  - [3. What value would assign read, write, and execute permissions?](#3-what-value-would-assign-read-write-and-execute-permissions)
+  - [4. What value would assign read and execute permissions?](#4-what-value-would-assign-read-and-execute-permissions)
+  - [5. What do three numbers like `644` mean in file permissions?](#5-what-do-three-numbers-like-644-mean-in-file-permissions)
+    - [Summary of Common Numeric Values:](#summary-of-common-numeric-values)
 
 ## 1. Why is managing file ownership important?
 
