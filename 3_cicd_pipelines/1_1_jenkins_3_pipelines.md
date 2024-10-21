@@ -23,6 +23,18 @@
   - [](#-2)
     - [Step 6: Save the Job and Test](#step-6-save-the-job-and-test)
     - [Troubleshooting Tips](#troubleshooting-tips)
+- [Job 3: Continuous Deployment to EC2 Using SSH Agent and rsync](#job-3-continuous-deployment-to-ec2-using-ssh-agent-and-rsync)
+  - [Steps to Create Job 3](#steps-to-create-job-3)
+    - [1. Set Up Jenkins Job](#1-set-up-jenkins-job)
+    - [2.1  Configure SSH Agent](#21--configure-ssh-agent)
+      - [2.2 How to Get Private Key](#22-how-to-get-private-key)
+    - [3. Configure SSH Agent in the Job](#3-configure-ssh-agent-in-the-job)
+    - [4. Add Build Step: Execute Shell](#4-add-build-step-execute-shell)
+    - [Script Explanation](#script-explanation)
+    - [5. Save and Run the Job](#5-save-and-run-the-job)
+    - [6. Verify Deployment](#6-verify-deployment)
+  - [Steps to Create Job 3 alternative:](#steps-to-create-job-3-alternative)
+  - [Summary:](#summary)
 
 ## Diagram of Project
 
@@ -199,7 +211,9 @@ The goal of **Job 2** is to automatically merge the `dev` branch into the `main`
    # Push the updated main branch back to GitHub
    git push origin main
    ```
-![alt text](/images/job-2-script.png)
+3. Alternatively a Better way is to not open execute shell and use git publishing plugin in post actions section.
+
+![alt text](/images/job-2-gitpublisher.png)
 ---
 
 ### Step 5: Set Up Post-Build Actions to Trigger Job 2 from Job 1
@@ -225,3 +239,108 @@ The goal of **Job 2** is to automatically merge the `dev` branch into the `main`
 
 ---
 
+# Job 3: Continuous Deployment to EC2 Using SSH Agent and rsync
+
+This job will deploy the application from Jenkins to an AWS EC2 instance by using the `ssh-agent` to manage SSH keys and `rsync` for efficient file transfer.
+
+## Steps to Create Job 3
+
+### 1. Set Up Jenkins Job
+
+- **Job Name**: `<yourname>-job3-cd-deploy`
+- Go to Jenkins Dashboard, click **New Item**.
+- Choose **Freestyle project** (or Pipeline, if preferred) and name it `<yourname>-job3-cd-deploy`.
+- Click **OK** to create the job.
+
+### 2.1  Configure SSH Agent 
+
+- Ensure the **SSH Agent Plugin** is installed 
+  
+- Go to **Manage Jenkins** → **Manage Credentials** → **Global**.
+  - Add a new credential of type **SSH Username with private key**.
+  - Paste the private SSH key for your EC2 instance and give the credential an ID (e.g., `aws-ssh-key`).
+  ![alt text](/images/job-3-5-add-credential-store.png)
+
+#### 2.2 How to Get Private Key
+
+Following steps to find your ec2 SSH key pair on your local machine:
+
+1. **Open Terminal** (or Command Prompt on Windows if using Git Bash).
+   
+2. **Find SSH Key**: when EC2 instance was created you received a private key to the vm only, while public key remained instead ec2 vm.
+3. **Print and paste key** into jenkins cred store. Using cat command and store into jenkins
+   ![alt text](/images/job-3-6-private-key.png)
+   ![alt text](/images/job-3-6-add-credential-store.png)
+
+### 3. Configure SSH Agent in the Job
+
+- In the job configuration, scroll to the **Build Environment** section.
+- Check the option **"SSH Agent"**.
+- Select the **SSH private key credential** you created (e.g., `raiyan-aws-key`).
+![alt text](/images/job-3-1-ssh-agent-cred.png)
+
+### 4. Add Build Step: Execute Shell
+
+- Scroll down to the **Build** section and click **Add build step** → **Execute shell**.
+- Paste the following shell script:
+- [Pipeline script](/script_reference/1_1_job_3_run_pipeline_script.sh)
+```bash
+# Define variables
+EC2_USER=ubuntu
+EC2_IP=34.241.57.116
+REMOTE_PATH=/home/ubuntu/app3
+
+# Add the EC2 instance to known hosts (this prevents SSH prompt when connecting for the first time)
+ssh-keyscan -H $EC2_IP >> ~/.ssh/known_hosts
+
+# Copy files from Jenkins workspace to the remote EC2 instance using rsync
+rsync -avz -e "ssh -o StrictHostKeyChecking=no" $(pwd)/ $EC2_USER@$EC2_IP:$REMOTE_PATH
+
+# SSH into EC2 instance and execute deployment commands
+ssh $EC2_USER@$EC2_IP << EOF
+    pm2 kill
+    # Navigate to the app directory
+    cd $REMOTE_PATH/app
+    # Run npm install and start the app with pm2
+    npm install
+    pm2 start app.js
+EOF
+```
+
+### Script Explanation
+
+1. **Define Variables**:
+    - `EC2_USER=ubuntu`: Your EC2 instance's SSH username (commonly `ubuntu`).
+    - `EC2_IP=34.241.57.116`: The public IP address of your EC2 instance.
+    - `REMOTE_PATH=/home/ubuntu/app3`: The directory path on the EC2 instance where files will be deployed.
+
+2. **Add EC2 to Known Hosts**:
+    - `ssh-keyscan -H $EC2_IP >> ~/.ssh/known_hosts`: Adds the EC2 instance’s SSH key to known hosts to avoid prompts.
+
+3. **File Transfer Using rsync**:
+    - `rsync -avz -e "ssh -o StrictHostKeyChecking=no" $(pwd)/ $EC2_USER@$EC2_IP:$REMOTE_PATH`: Copies files from Jenkins workspace to EC2 instance efficiently.
+
+4. **Remote Commands**:
+    - SSH into the EC2 instance and execute the following:
+      - `pm2 kill`: Stops all running PM2 processes.
+      - `cd $REMOTE_PATH/app`: Navigate to the app directory.
+      - `npm install`: Installs dependencies from the `package.json` file.
+      - `pm2 start app.js`: Starts the app with PM2.
+
+### 5. Save and Run the Job
+
+- After pasting the script, click **Save**.
+- Trigger the job manually by clicking **Build Now**, or set up automatic triggers (e.g., after a successful build in CI).
+
+### 6. Verify Deployment
+
+- Once the job runs, Jenkins will:
+  - Authenticate to the EC2 instance using `ssh-agent`.
+  - Copy the project files to the EC2 instance using `rsync`.
+  - SSH into the instance and install dependencies, then start the app with PM2.
+
+## Steps to Create Job 3 alternative:
+
+
+## Summary:
+You successfully set up a Jenkins job to deploy an application to an AWS EC2 instance using SSH agent for secure key management and rsync for efficient file transfer.
