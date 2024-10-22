@@ -16,15 +16,11 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'  # Specify the Python version you want to use
-
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt  # Only if you have a requirements.txt file, otherwise skip this step
+        python-version: '3.12.6'  # Specify the Python version you want to use
 
     - name: Run Python Script
       run: |
-        python your_script.py  # Replace this with the actual name of your Python script that edits the README.md
+        generate_readme_contents_table.py  # Replace this with the actual name of your Python script that edits the README.md
 
     - name: Commit and push changes
       run: |
