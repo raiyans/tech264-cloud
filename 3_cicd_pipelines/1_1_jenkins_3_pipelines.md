@@ -1,7 +1,7 @@
 # Make pipeline with 3 jobs
 - [Make pipeline with 3 jobs](#make-pipeline-with-3-jobs)
   - [Diagram of Project](#diagram-of-project)
-  - [Making Job 1 in Jenkins](#making-job-1-in-jenkins)
+- [Making Job 1 in Jenkins](#making-job-1-in-jenkins)
     - [--\> Source Code Management](#---source-code-management)
     - [--\> Build Environment](#---build-environment)
     - [--\> Build Steps](#---build-steps)
@@ -46,7 +46,7 @@
 ![diagram](/images/pipeline_with_3_jobs.png)
 
 
-## Making Job 1 in Jenkins
+# Making Job 1 in Jenkins
 1. Follow the previous steps for creation from **1 - 4.**
 2. Enable Github Project.
 3. Enter the **HTTPS link** for the **repository** you wish to link.
@@ -194,7 +194,7 @@ The goal of **Job 2** is to automatically merge the `dev` branch into the `main`
 ### Step 3: Configure Build Triggers
 1. Scroll down to **Build Triggers**.
 2. Check **GitHub hook trigger for GITScm polling**. This will enable the webhook to trigger this job when changes are pushed to the `dev` branch.
-
+  <br>
 ![alt text](/images/job-2-build-project-1-alt.png)
 ---
 
@@ -217,7 +217,7 @@ The goal of **Job 2** is to automatically merge the `dev` branch into the `main`
    git push origin main
    ```
 3. Alternatively a Better way is to not open execute shell and use git publishing plugin in post actions section.
-
+  <br>
 ![alt text](/images/job-2-gitpublisher.png)
 ---
 
@@ -227,7 +227,7 @@ The goal of **Job 2** is to automatically merge the `dev` branch into the `main`
 3. Scroll down to **Post-build Actions** and choose **Trigger parameterized build on other projects**.
 4. Under **Projects to build**, enter `<yourname>-job2-ci-merge`.
 5. Set the **Trigger only if build succeeds** option to ensure Job 2 runs only if Job 1 is successful.
-
+  <br>
 ![alt text](/images/job-2-build-project-1-alt.png)
 ---
 
@@ -251,7 +251,7 @@ This job will deploy the application from Jenkins to an AWS EC2 instance by usin
 ## Steps to Create Job 3
 
 ### 0. Create an EC2 instance for only a Node App 
-
+  <br>
 - More Info on with steps on [How to create EC2 instance](/2_aws_practical/0_two_tier_deploy_with_1_subnet.md)
 - Take note of where you save **private key** and **http/ssh** connections are **allowed**
 
@@ -269,6 +269,7 @@ This job will deploy the application from Jenkins to an AWS EC2 instance by usin
 - Go to **Manage Jenkins** → **Manage Credentials** → **Global**.
   - Add a new credential of type **SSH Username with private key**.
   - Paste the private SSH key for your EC2 instance and give the credential an ID (e.g., `aws-ssh-key`).
+  <br>
   ![alt text](/images/job-3-5-add-credential-store.png)
 
 ### 2.2 How to Get Private Key
@@ -279,8 +280,11 @@ Following steps to find your ec2 SSH key pair on your local machine:
    
 2. **Find SSH Key**: when EC2 instance was created you received a private key to the vm only, while public key remained instead ec2 vm.
 3. **Print and paste key** into jenkins cred store. Using cat command and store into jenkins
+<br>
+
    ![alt text](/images/job-3-6-private-key.png)
    ![alt text](/images/job-3-6-add-credential-store.png)
+  <br>
 
 ### 3. Configure SSH Agent in the Job
 
