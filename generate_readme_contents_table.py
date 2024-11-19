@@ -27,7 +27,8 @@ directories = [
     "0_research",
     "1_azure_practicals",
     "2_aws_practical",
-    "3_cicd_pipelines",
+    "3_cicd_pipelines_practicals",
+    "5_aws_monitoring_practicals",
     "script_reference",
 ]
 

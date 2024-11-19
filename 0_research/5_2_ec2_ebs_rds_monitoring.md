@@ -1,3 +1,5 @@
+# Monitoring and Alerting for AWS EC2
+
 - [Monitoring and Alerting for AWS EC2](#monitoring-and-alerting-for-aws-ec2)
   - [Introduction to AWS EC2](#introduction-to-aws-ec2)
   - [Learning Objectives](#learning-objectives)
@@ -176,8 +178,6 @@
 - [Quiz](#quiz-4)
 
 <br>
-
-# Monitoring and Alerting for AWS EC2
 
 ## Introduction to AWS EC2
 * Stands for **Elastic Cloud Compute Service**.
