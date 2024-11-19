@@ -122,7 +122,7 @@ echo "App started with pm2"
 ## Securing the DB with a DMZ subnet- 3 subnet vnet
 
  Our private subnet currently doesn't have anymore security than our public:
- [securing-db](/0_research/8_securing_db.md)
+ [securing-db](/0_research/1_8_securing_db.md)
 
 #### Quick increase of db w/o nva
  current subnet allows communication between vms in the same subnet

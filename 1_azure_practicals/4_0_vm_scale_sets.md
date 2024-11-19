@@ -26,7 +26,7 @@
 
 This document covers how to create an Azure VM Scale Set (VMSS), manage instances, use a load balancer, and test various scenarios such as unhealthy instances. Additionally, we will walk through how to test and connect to the scale set and how to delete it when no longer needed.
 
-for more extended information on the concepts you should check [Autoscaling](/0_research/7_autoscaling.md)
+for more extended information on the concepts you should check [Autoscaling](/0_research/1_7_autoscaling.md)
 
 ---
 

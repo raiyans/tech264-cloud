@@ -172,7 +172,7 @@ Cons:
 
 **In short, Azure images help you quickly create virtual machines that are ready to use, without having to manually install an operating system or software.**
 
-[link to more images info](/0_research/6_images.md)
+[link to more images info](/0_research/1_6_images.md)
 
 
 ## Launch app+db Image
