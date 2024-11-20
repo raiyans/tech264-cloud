@@ -29,7 +29,7 @@ directories = [
     "2_aws_practical",
     "3_cicd_pipelines_practicals",
     "4_terraform_ansible_practicals",
-    "5_docker_k8s_practical"
+    "5_docker_kubernetes_practical",
     "6_aws_monitoring_practicals",
     "script_reference",
 ]

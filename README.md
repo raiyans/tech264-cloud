@@ -16,9 +16,16 @@ Below is a list of all markdown files in this repository, contents generated and
 - [2_0_az_vs_aws.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/2_0_az_vs_aws.md)
 - [2_1_aws_services_intro.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/2_1_aws_services_intro.md)
 - [3_0_cicd.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/3_0_cicd.md)
-- [5_0_aws_monitoring.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_0_aws_monitoring.md)
-- [5_1_deep_dive_cloudwatch.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_1_deep_dive_cloudwatch.md)
-- [5_2_ec2_ebs_rds_monitoring.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_2_ec2_ebs_rds_monitoring.md)
+- [4_0_iac.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/4_0_iac.md)
+- [4_1_terraform_overview.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/4_1_terraform_overview.md)
+- [4_2_terraform_pull_push.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/4_2_terraform_pull_push.md)
+- [5_0_docker.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_0_docker.md)
+- [5_1_docker_compose.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_1_docker_compose.md)
+- [5_2_kubernetes.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_2_kubernetes.md)
+- [5_3_kubernetes_autoscale.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_3_kubernetes_autoscale.md)
+- [6_0_aws_monitoring.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/6_0_aws_monitoring.md)
+- [6_1_deep_dive_cloudwatch.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/6_1_deep_dive_cloudwatch.md)
+- [6_2_ec2_ebs_rds_monitoring.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/6_2_ec2_ebs_rds_monitoring.md)
 
 
 ## 1 Azure Practicals
@@ -47,9 +54,24 @@ Below is a list of all markdown files in this repository, contents generated and
 - [1_1_jenkins_3_pipelines.md](https://github.com/raiyans/tech264-cloud/blob/main/3_cicd_pipelines_practicals/1_1_jenkins_3_pipelines.md)
 
 
-## 5 Aws Monitoring Practicals
+## 4 Terraform Ansible Practicals
 
-- [5_0_app_db.md](https://github.com/raiyans/tech264-cloud/blob/main/5_aws_monitoring_practicals/5_0_app_db.md)
+- [0_0_install_terraform.md](https://github.com/raiyans/tech264-cloud/blob/main/4_terraform_ansible_practicals/0_0_install_terraform.md)
+- [0_1_terraform_basic_cmds.md](https://github.com/raiyans/tech264-cloud/blob/main/4_terraform_ansible_practicals/0_1_terraform_basic_cmds.md)
+- [1_0_ansible.md](https://github.com/raiyans/tech264-cloud/blob/main/4_terraform_ansible_practicals/1_0_ansible.md)
+
+
+## 5 Docker Kubernetes Practical
+
+- [0_0_docker_first_commands.md](https://github.com/raiyans/tech264-cloud/blob/main/5_docker_kubernetes_practical/0_0_docker_first_commands.md)
+- [0_1_dockerhub_first_image.md](https://github.com/raiyans/tech264-cloud/blob/main/5_docker_kubernetes_practical/0_1_dockerhub_first_image.md)
+- [0_2_docker_compose.md](https://github.com/raiyans/tech264-cloud/blob/main/5_docker_kubernetes_practical/0_2_docker_compose.md)
+- [1_0_kubernetes_first_cluster.md](https://github.com/raiyans/tech264-cloud/blob/main/5_docker_kubernetes_practical/1_0_kubernetes_first_cluster.md)
+
+
+## 6 Aws Monitoring Practicals
+
+- [6_0_cloudwatch_app_db.md](https://github.com/raiyans/tech264-cloud/blob/main/6_aws_monitoring_practicals/6_0_cloudwatch_app_db.md)
 
 
 ## Script Reference
