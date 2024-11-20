@@ -1,0 +1,1 @@
+TODO: Make a monitoring solution for the node and db app using cloud watch and then grafana and prometheus for next section

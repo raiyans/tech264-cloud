@@ -1,1 +1,0 @@
-TODO: Make a monitoring solution for the node and db app using clojud watch and then grafana and prometheus
