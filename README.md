@@ -71,7 +71,19 @@ Below is a list of all markdown files in this repository, contents generated and
 
 ## 6 Aws Monitoring Practicals
 
-- [6_0_cloudwatch_app_db.md](https://github.com/raiyans/tech264-cloud/blob/main/6_aws_monitoring_practicals/6_0_cloudwatch_app_db.md)
+- [0_0_cloudwatch_app_db.md](https://github.com/raiyans/tech264-cloud/blob/main/6_aws_monitoring_practicals/0_0_cloudwatch_app_db.md)
+
+
+## 7 Prometheus Grafana
+
+- [0_0_install_prom_graf.md](https://github.com/raiyans/tech264-cloud/blob/main/7_prometheus_grafana/0_0_install_prom_graf.md)
+
+
+## 8 Java Springboot Two Tier
+
+- [0_0_overview.md](https://github.com/raiyans/tech264-cloud/blob/main/8_java_springboot_two_tier/0_0_overview.md)
+- [0_1_repo_&_run_locally.md](https://github.com/raiyans/tech264-cloud/blob/main/8_java_springboot_two_tier/0_1_repo_&_run_locally.md)
+- [0_2_run_with_aws_userdata.md](https://github.com/raiyans/tech264-cloud/blob/main/8_java_springboot_two_tier/0_2_run_with_aws_userdata.md)
 
 
 ## Script Reference
