@@ -1,4 +1,12 @@
 # Stage 3 - run app and on aws
+- [Stage 3 - run app and on aws](#stage-3---run-app-and-on-aws)
+  - [Instruction overview and deliverables](#instruction-overview-and-deliverables)
+  - [Steps to set up db vm on aws](#steps-to-set-up-db-vm-on-aws)
+  - [Steps to set up app vm on aws](#steps-to-set-up-app-vm-on-aws)
+  - [Steps to set up Db vm to be ready](#steps-to-set-up-db-vm-to-be-ready)
+  - [Steps to set up App vm to connect](#steps-to-set-up-app-vm-to-connect)
+  - [Check your provision scripts run correctly on new vms](#check-your-provision-scripts-run-correctly-on-new-vms)
+  - [How to make with UserData](#how-to-make-with-userdata)
 
 ## Instruction overview and deliverables
 

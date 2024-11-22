@@ -1,0 +1,44 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-sparta-app-deployment
+spec:
+  selector:
+    matchLabels:
+      app: spring-sparta-app # Label to match Pods for the Deployment
+  template:
+    metadata:
+      labels:
+        app: spring-sparta-app # Ensure this matches the Service selector
+    spec:
+      containers:
+      - name: spring-sparta-app
+        image: raiyans/library-app:v2
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8008
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:mysql://spring-database:3306/library
+        - name: SPRING_DATASOURCE_USERNAME
+          value: root
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: root
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-sparta-app-service # Use a distinct and meaningful name
+spec:
+  selector:
+    app: spring-sparta-app # Matches the label in the Deployment
+  ports:
+  - nodePort: 30002
+    port: 8008
+    targetPort: 8008
+  type: NodePort
+---

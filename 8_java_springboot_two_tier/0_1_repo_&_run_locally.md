@@ -1,4 +1,8 @@
 # Stage 1 & 2 - run app locally
+- [Stage 1 \& 2 - run app locally](#stage-1--2---run-app-locally)
+  - [instruction overview and deliverables](#instruction-overview-and-deliverables)
+- [Steps to see front page](#steps-to-see-front-page)
+  - [steps to see /web/authors data page](#steps-to-see-webauthors-data-page)
 
 ## instruction overview and deliverables
 
