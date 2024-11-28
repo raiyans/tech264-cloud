@@ -267,6 +267,7 @@ EOL
 Test the Nginx configuration:
 ``` bash
 sudo nginx -t
+sudo systemctl reload nginx
 ```
 ### 13. Verify Deployment
 Check Kubernetes resources to ensure the application and database are running:
