@@ -84,6 +84,8 @@ Below is a list of all markdown files in this repository, contents generated and
 - [0_0_overview.md](https://github.com/raiyans/tech264-cloud/blob/main/8_java_springboot_two_tier/0_0_overview.md)
 - [0_1_repo_&_run_locally.md](https://github.com/raiyans/tech264-cloud/blob/main/8_java_springboot_two_tier/0_1_repo_&_run_locally.md)
 - [0_2_run_with_aws_userdata.md](https://github.com/raiyans/tech264-cloud/blob/main/8_java_springboot_two_tier/0_2_run_with_aws_userdata.md)
+- [0_3_containerise_in_one_vm.md](https://github.com/raiyans/tech264-cloud/blob/main/8_java_springboot_two_tier/0_3_containerise_in_one_vm.md)
+- [0_4_minikube_deploy_ec2.md](https://github.com/raiyans/tech264-cloud/blob/main/8_java_springboot_two_tier/0_4_minikube_deploy_ec2.md)
 
 
 ## Script Reference
