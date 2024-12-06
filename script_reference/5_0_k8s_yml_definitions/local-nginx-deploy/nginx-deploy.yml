@@ -1,0 +1,21 @@
+apiVersion: apps/v1 # specify api to use for deployment
+kind: Deployment #kind of service or object that we want to create.
+metadata:
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx #Look for this. It's like a label or A tag to match with the K8 service.
+#The service is going to need this to use this label NGINX here that we've defined OK in order to know.
+#create A replica set With instances/pods
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image:  raiyans/tech264-raiyan-nginx-auto:v1
+        ports:
+        - containerPort: 80 

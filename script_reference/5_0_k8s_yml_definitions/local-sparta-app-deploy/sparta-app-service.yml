@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sparta-app-svc
+  namespace: default
+spec:
+  ports:
+  - nodePort: 30002 # NodePort service can use 30000-32768
+  # like a seperate machine nodePort goes to the worker nodes
+    port: 3000
+    targetPort: 3000 # port of the pods
+  selector:
+    app: sparta-app  # Label to match service to deployment
+  type: NodePort

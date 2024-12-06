@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sparta-app-deployment
+spec:
+  selector:
+    matchLabels:
+      app: sparta-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: sparta-app
+    spec:
+      containers:
+      - name: sparta-app
+        image: raiyans/sparta-test-app:v1-no-db
+        ports:
+        - containerPort: 80 
+        env:
+        - name: DB_HOST
+          value: mongodb://mongo-svc:27017/posts
+        - name: DB_PORT
+          value: "27017"
+        resources:
+          requests:
+            cpu: 50m  # Minimum CPU guaranteed to each pod (50 millicores)
+          limits:
+            cpu: 250m  # Maximum CPU each pod can use (250 millicores)
