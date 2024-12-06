@@ -23,6 +23,8 @@ Below is a list of all markdown files in this repository, contents generated and
 - [5_1_docker_compose.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_1_docker_compose.md)
 - [5_2_kubernetes.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_2_kubernetes.md)
 - [5_3_kubernetes_autoscale.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_3_kubernetes_autoscale.md)
+- [5_4_0_udemy_docker_notes.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_4_0_udemy_docker_notes.md)
+- [5_4_1_udemy_docker_cheatsheets.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/5_4_1_udemy_docker_cheatsheets.md)
 - [6_0_aws_monitoring.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/6_0_aws_monitoring.md)
 - [6_1_deep_dive_cloudwatch.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/6_1_deep_dive_cloudwatch.md)
 - [6_2_ec2_ebs_rds_monitoring.md](https://github.com/raiyans/tech264-cloud/blob/main/0_research/6_2_ec2_ebs_rds_monitoring.md)
@@ -69,14 +71,10 @@ Below is a list of all markdown files in this repository, contents generated and
 - [1_0_kubernetes_first_cluster.md](https://github.com/raiyans/tech264-cloud/blob/main/5_docker_kubernetes_practical/1_0_kubernetes_first_cluster.md)
 
 
-## 6 Aws Monitoring Practicals
+## 6 Prometheus Grafana Monitoring
 
-- [0_0_cloudwatch_app_db.md](https://github.com/raiyans/tech264-cloud/blob/main/6_aws_monitoring_practicals/0_0_cloudwatch_app_db.md)
-
-
-## 7 Prometheus Grafana
-
-- [0_0_install_prom_graf.md](https://github.com/raiyans/tech264-cloud/blob/main/7_prometheus_grafana/0_0_install_prom_graf.md)
+- [0_0_cloudwatch_app_db.md](https://github.com/raiyans/tech264-cloud/blob/main/6_prometheus_grafana_monitoring/0_0_cloudwatch_app_db.md)
+- [0_0_install_prom_graf.md](https://github.com/raiyans/tech264-cloud/blob/main/6_prometheus_grafana_monitoring/0_0_install_prom_graf.md)
 
 
 ## 8 Java Springboot Two Tier

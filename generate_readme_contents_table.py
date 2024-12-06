@@ -30,8 +30,7 @@ directories = [
     "3_cicd_pipelines_practicals",
     "4_terraform_ansible_practicals",
     "5_docker_kubernetes_practical",
-    "6_aws_monitoring_practicals",
-    "7_prometheus_grafana",
+    "6_prometheus_grafana_monitoring",
     "8_java_springboot_two_tier",
     "script_reference",
 ]
